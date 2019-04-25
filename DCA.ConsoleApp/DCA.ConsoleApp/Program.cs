@@ -13,6 +13,7 @@ namespace DCA.ConsoleApp
         static void SendEmail()
         {
             Console.WriteLine("Кому отправить сообщение?");
+
             using (var receiversRepository = new ReceiverRepository())
             using (var mailsRepository = new MailsRepository())
             {
@@ -36,6 +37,7 @@ namespace DCA.ConsoleApp
 
                 Console.WriteLine("Введите тему сообщения");
                 mail.Theme = Console.ReadLine();
+
                 Console.WriteLine("Введите сообщениe");
                 mail.Text = Console.ReadLine();
 
@@ -43,19 +45,19 @@ namespace DCA.ConsoleApp
             }
         }
 
-        static void AddReceiver()
-        {
-            using (var reciversRepository = new ReceiverRepository())
-            {
-                Receiver reciver = new Receiver();
-                Console.WriteLine("Введите имя");
-                reciver.FullName = Console.ReadLine();
-                Console.WriteLine("Введите адрес");
-                reciver.Address = Console.ReadLine();
+        //static void AddReceiver()
+        //{
+        //    using (var reciversRepository = new ReceiverRepository())
+        //    {
+        //        Receiver reciver = new Receiver();
+        //        Console.WriteLine("Введите имя");
+        //        reciver.FullName = Console.ReadLine();
+        //        Console.WriteLine("Введите адрес");
+        //        reciver.Address = Console.ReadLine();
 
-                reciversRepository.Add(reciver);
-            }
-        }
+        //        reciversRepository.Add(reciver);
+        //    }
+        //}
 
         static void Main(string[] args)
         {
