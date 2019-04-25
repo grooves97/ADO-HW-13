@@ -26,12 +26,12 @@ namespace DCA.ConsoleApp
                     Console.WriteLine(ineration + ": " + receiver.FullName);
                 }
 
-                int reciverNumber;
+                int receiverNumber;
 
-                if (int.TryParse(Console.ReadLine(), out reciverNumber) && receivers.Count >= reciverNumber)
+                if (int.TryParse(Console.ReadLine(), out receiverNumber) && receivers.Count >= receiverNumber)
                 {
-                    mail.Receiver = receivers.ElementAt(reciverNumber - 1);
-                    mail.ReceiverId = receivers.ElementAt(reciverNumber - 1).Id;
+                    mail.Receiver = receivers.ElementAt(receiverNumber - 1);
+                    mail.ReceiverId = receivers.ElementAt(receiverNumber - 1).Id;
                 }
                 else return;
 
